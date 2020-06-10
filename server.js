@@ -16,13 +16,14 @@ const todo = [
 const server = http.createServer((req, res) => {
   // define a body
   let body = [];
-  // call on on req - listent for 'data' event, funciton where v push the chunk to body array
+  // call on on req - listent for 'data' event, once recievd chunk of data, fires function where v push the chunk of data to body array
   // concat the body array to Buffer - finally convert to String. finally log the body
   req
     .on('data', (chunk) => {
       body.push(chunk);
     })
     .on('end', () => {
+      // convert Buffer to string
       body = Buffer.concat(body).toString();
       console.log(body);
     });

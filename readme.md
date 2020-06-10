@@ -173,3 +173,27 @@ const server = http.createServer((req, res) => {
   );
 });
 ```
+
+## http reques methods
+
+- GET - retrieve resources, eg: fetch data
+
+- POST - submit resources, eg: submit forms
+
+- PUT/PATCH - update resource, ed: upadte user emails..
+  difference b/w both is **PUT** replace entie data of the targeted resource.
+  while **PATCH** updates a portion we specify.
+
+- DELETE - Delete/Destroy resources.
+
+## restful api standards
+
+- **GET /todos** -> get todos
+
+- **GET /todos/1** -> ge todos with id of 1
+
+- **POST /todos** => post a todo
+
+- **PUT /todos/1**-> update todo with id 1.
+
+- **DELETE /todos/1** -> delete todo with id 1.
